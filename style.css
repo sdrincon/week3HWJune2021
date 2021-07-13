@@ -1,0 +1,193 @@
+
+body {
+	background: url(./images/background.jpg); /*pokeball wallpaper*/
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 0;
+	text-align: center;
+}
+
+.container { /*main container*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 5px;
+	padding: 20px;
+}
+
+li {
+	list-style: none; /*removes bullet*/
+}
+
+.btn { /*default button settings*/
+	border-radius: 10px;
+	border: none;
+	font-weight: bold;
+	font-size: 20px;
+	box-shadow: 0px 2px 4px 1px gray;
+	padding: 10px;
+}
+
+.score-panel { /*container for timer and moves*/
+	font-size: 20px;
+	padding: 10px;
+	color: navy;
+	font-weight: bold;
+}
+
+.reset { /*container for reset button*/
+	padding: 20px 0 0 0;
+	cursor: pointer;
+}
+
+.reset-btn { /*reset button*/
+	background: cornflowerblue;
+	color: white;
+	cursor: pointer;
+}
+
+.modal { /*container for modal*/
+	display: none;
+	position: absolute;
+	z-index: 99; 
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.modal-content { /*settings inside modal*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color:lemonchiffon;
+	margin: 25px auto;
+	border: 2px solid gray;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.modal-content h1 { /*modal banner*/
+	font-size: 30px;
+	color: navy;
+	border-radius: 30px;
+}
+
+.close { /*circle-X button on modal*/
+	align-self: flex-end;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.modal-img { /*Pikachu*/
+	display: inline-block;
+	margin: 10px 0 10px;
+	width: 200px;
+}
+
+p.stats { /*modal stats displayed */
+	font-weight: bold;
+	color: navy;
+}
+
+.play-again-btn { /*play again button*/
+	background: cornflowerblue;
+	margin-bottom: 5px;
+	font-size: large;
+	color: white;
+	cursor: pointer;
+}
+
+.deck { /*default deck container*/
+	background: linear-gradient(to bottom, lightblue, cornflowerblue);
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 500px;
+	width: 600px;
+	padding: 20px;
+	box-shadow: 0px 2px 4px 1px gray;
+	}
+
+}
+
+.deck,
+.card {
+	box-shadow: 0px 2px 4px 1px gray;
+}
+
+.card { /*each separate card element*/
+	background-image: url(./images/pokeball.png); 
+	border-radius: 10px;
+	height: 95px;
+	width: 95px;
+	padding: 5px;
+	box-shadow: 0px 2px 4px 1px gray;
+	}
+}
+
+img { /*removes image select attributes*/
+	user-select: none;
+}
+
+.deck img { /*Pokemon*/
+	visibility: hidden;
+	width: 95px;
+}
+
+.deck .card.flip { /*flipped card behavior*/
+	background: white;
+	cursor: default;
+	transform: rotateY(360deg);
+	transition: transform 0.3s linear;
+	pointer-events: none;
+}
+
+.flip img { /*flipped card*/
+	background: white;
+	visibility: visible;
+}
+
+.deck .card.match { /*matched card behavior*/
+	background: lemonchiffon;
+	visibility: visible;
+	cursor: default;
+	animation: pulse 1s;
+}
+
+.match img { /*matched card color change*/
+	background: lemonchiffon;
+}
+
+/*animation for matched cards*/
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/*footer attributes*/
+.footer {
+	color: navy;
+	margin-bottom: 10px;
+	font-size: 15px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+

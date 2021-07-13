@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--CSS style sheet tag-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--unoriginal tab title-->
+    <title>Week 3 Homework</title>
+
+    <!--meta tags-->
+    <meta name="keywords" content= "HTML, CSS, VetsinTech, Memory, Game, Pokemon">
+
+</head>
+
+<body>
+    <header class="header">
+        <img src="./images/pokemon.png" width="500" alt="Pokemon logo">
+    </header>
+    
+    <!-- Audio buttons -->
+    <audio loop id="myAudio">
+        <source src="./music/pokemongo.wav" type="audio/wav">"
+        Your browser does not support the audio element.
+    </audio>
+    <i style="color: navy; font-weight: bold;">Press here for music!</i> &ThickSpace;
+    <!--I couldn't figure out a way to do a button toggle without it getting complicated-->
+    <button onclick="playAudio()" type="button">►</button>
+    <button onclick="pauseAudio()" type="button">❚❚</button>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Score panel -->
+        <div class="score-panel">
+            <span class="moves-counter">0</span> Moves &ThickSpace; &ThickSpace;
+            <span class="timer-container">
+                <span class="timer"><i class="fa fa-hourglass-start"></i> Time: 00:00</span>
+            </span>
+            <div class="reset">
+                <button class="btn reset-btn">Reset <i class="fa fa-repeat"></i></button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="win-game-modal">
+            <div id="modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close"><img src="./images/x.png" width="30"></span>
+                    <h1>Congratulations!</h1>
+                    <p>You matched all the Pokémon!</p>
+                    <img class="modal-img" src="images/pikachu.png" alt="Pikachu">
+                    <button class="btn play-again-btn">Play Again?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deck layout -->
+        <ul class="deck"></ul>
+
+    </div>
+
+    <!-- Footer -->
+    <span class="footer">Logo, theme song & images are &copy; 2021 Pokemon. Not intended for commercial use.</span>
+
+    <!-- Javascript -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
